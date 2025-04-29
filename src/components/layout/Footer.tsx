@@ -1,5 +1,6 @@
 
 import { Link } from 'react-router-dom';
+import zafranLogo from '@/assets/zafran-logo.png';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,6 +12,7 @@ export function Footer() {
           {/* Logo and description */}
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center mb-6">
+              <img src={zafranLogo} alt="Zafran" className="h-12 w-auto mr-2" />
               <span className="font-serif text-zafran-400 text-3xl font-bold">Zafran</span>
               <span className="font-arabic text-spice-300 text-sm ml-1 mt-3">زعفران</span>
             </Link>
