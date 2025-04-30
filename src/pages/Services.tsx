@@ -60,6 +60,7 @@ const Services = () => {
                     price={service.price}
                     category={service.categor}
                     slug={service.slug}
+                    imageUrl={service.image?.url}
                     delay={index * 100}
                   />
                 ))}
