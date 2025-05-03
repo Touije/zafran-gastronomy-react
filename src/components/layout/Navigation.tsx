@@ -65,6 +65,14 @@ export function Navigation() {
             >
               Déconnexion
             </Button>
+            
+            {/* Show "Réserver" button only when user is authenticated */}
+            <Link 
+              to="/contact" 
+              className="btn-primary"
+            >
+              Réserver
+            </Link>
           </div>
         ) : (
           <div className="flex items-center gap-2">
@@ -80,13 +88,6 @@ export function Navigation() {
             </Link>
           </div>
         )}
-        
-        <Link 
-          to="/contact" 
-          className="btn-primary"
-        >
-          Réserver
-        </Link>
       </nav>
 
       {/* Mobile Navigation Trigger */}
@@ -155,6 +156,15 @@ export function Navigation() {
                 >
                   Déconnexion
                 </Button>
+                
+                {/* Show "Réserver" button only when user is authenticated in mobile menu */}
+                <Link 
+                  to="/contact" 
+                  className="btn-primary w-full text-center mt-8"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Réserver
+                </Link>
               </div>
             ) : (
               <div className="flex flex-col space-y-4">
@@ -178,14 +188,6 @@ export function Navigation() {
                 </Link>
               </div>
             )}
-            
-            <Link 
-              to="/contact" 
-              className="btn-primary w-full text-center mt-8"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Réserver
-            </Link>
           </nav>
         </div>
       )}
