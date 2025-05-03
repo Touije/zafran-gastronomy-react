@@ -42,7 +42,7 @@ export function FeaturedServices() {
                 price={service.price}
                 category={service.categor}
                 slug={service.slug}
-                imageUrl={service.image?.url}
+                imageUrl={service.image?.url ? `http://localhost:1337${service.image.url}` : undefined}
                 delay={index * 150}
               />
             ))}
@@ -52,6 +52,12 @@ export function FeaturedServices() {
         <div className="text-center mt-12">
           <a href="/services" className="btn-outline">
             Voir tous nos services
+          </a>
+        </div>
+        
+        <div className="mt-12 text-center">
+          <a href="/admin" className="btn-primary">
+            Administration
           </a>
         </div>
       </div>
