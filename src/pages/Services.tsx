@@ -79,7 +79,7 @@ const Services = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main>
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white dark:bg-clay-950">
           <div className="container-custom">
             <div className="text-center mb-16">
               <h1 className="section-title mb-6">Nos Services</h1>
@@ -96,7 +96,7 @@ const Services = () => {
                   placeholder="Rechercher un service..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zafran-500"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-zafran-500 bg-white dark:bg-gray-800 text-foreground"
                 />
               </div>
               
@@ -109,7 +109,7 @@ const Services = () => {
                       Filtrer par catégorie
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-56 bg-white">
+                  <DropdownMenuContent className="w-56 bg-white dark:bg-gray-800">
                     <DropdownMenuLabel>Catégories</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     {categories.map((category) => (

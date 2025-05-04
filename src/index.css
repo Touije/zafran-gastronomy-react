@@ -38,6 +38,36 @@
     --radius: 0.5rem;
   }
 
+  .dark {
+    --background: 33 10% 10%;
+    --foreground: 30 33% 99%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 30 85% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 23 70% 35%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 240 10% 20%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 44 80% 25%;
+    --accent-foreground: 30 85% 80%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 30 85% 50%;
+  }
+
   * {
     @apply border-border;
   }
@@ -66,6 +96,10 @@
     opacity: 0.05;
     z-index: 0;
   }
+
+  .dark .moroccan-pattern::after {
+    opacity: 0.1;
+  }
 }
 
 @layer components {
@@ -74,7 +108,7 @@
   }
   
   .section-title {
-    @apply font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-clay-900 relative inline-block;
+    @apply font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-clay-900 dark:text-clay-100 relative inline-block;
   }
   
   .section-title::after {
@@ -83,7 +117,7 @@
   }
   
   .section-subtitle {
-    @apply text-lg md:text-xl text-clay-700 mt-4 max-w-3xl mx-auto;
+    @apply text-lg md:text-xl text-clay-700 dark:text-clay-300 mt-4 max-w-3xl mx-auto;
   }
   
   .btn-primary {
